@@ -15,17 +15,16 @@ Beispiel mit juniper und diesel nach [Tutorial](https://dev.to/open-graphql/buil
 * Conntect to Database `\c other_than_db`
 
 ### Docker compose file
-`
-version: '3'
-services:
-  database:
-    image: 'postgres:latest'
-    ports:
-      - 5432:5432
 
-    environment:
-      - POSTGRES_USER=docker
-      - POSTGRES_PASSWORD=docker
-      - POSTGRES_DB=db
+    version: '3'
+    services:
+        database:
+            image: 'postgres:latest'
+            ports:
+            - 5432:5432
 
-`
+        environment:
+        - POSTGRES_USER=docker
+        - POSTGRES_PASSWORD=docker
+        - POSTGRES_DB=db
+
