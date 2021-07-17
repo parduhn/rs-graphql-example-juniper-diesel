@@ -13,3 +13,19 @@ Beispiel mit juniper und diesel nach [Tutorial](https://dev.to/open-graphql/buil
 * Login `psql -h localhost -p 5432 -U docker db`
 * List tables `\dt`
 * Conntect to Database `\c other_than_db`
+
+### Docker compose file
+`
+version: '3'
+services:
+  database:
+    image: 'postgres:latest'
+    ports:
+      - 5432:5432
+
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=db
+
+`
